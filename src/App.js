@@ -1,12 +1,12 @@
 function App() {
   return (
-    <div className="App clear">
-      <header className="d-flex justify-between align-center">
+    <div className="wrapper clear">
+      <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
         <img width={50} height={50} src="/img/logo.png"></img>
         <div>
           <h3 className="text-uppercase">Just Books</h3>
-          <p>Просто магазин книг</p>
+          <p className="opacity-5">Просто магазин книг</p>
         </div>
         </div>
         <ul className="d-flex">
