@@ -1,6 +1,18 @@
 function App() {
   return (
     <div className="wrapper clear">
+      <div className="overlay">
+        <div className="drawer">
+          <h2>Корзина</h2>
+          <div className="cartItem">
+            <img src="/img/books/book1.png"></img>
+            <div>
+              <p>Мастер… без Маргариты</p>
+              <b>636 руб</b>
+            </div>
+          </div>
+        </div>
+      </div>
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
         <img width={50} height={50} src="/img/logo.png"></img>
@@ -23,9 +35,6 @@ function App() {
         <h1 className="mb-40">Просто Книги</h1>
         <div className="d-flex">
         <div className="card">
-          <div className="favorite">
-            <img src="/img/like-off.svg" alt="like-off"></img>
-          </div>
           <img width={80} height={117} src="/img/books/book1.png"></img>
           <h5>Мастер… без Маргариты</h5>
           <div className="d-flex justify-between align-center">
