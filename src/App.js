@@ -23,7 +23,9 @@ function App() {
         <h1 className="mb-40">Просто Книги</h1>
         <div className="d-flex">
         <div className="card">
-          <img src="/img/like-off.svg"></img>
+          <div className="favorite">
+            <img src="/img/like-off.svg" alt="like-off"></img>
+          </div>
           <img width={80} height={117} src="/img/books/book1.png"></img>
           <h5>Мастер… без Маргариты</h5>
           <div className="d-flex justify-between align-center">
@@ -38,7 +40,7 @@ function App() {
         </div>
         <div className="card">
           <img width={80} height={117} src="/img/books/book2.png"></img>
-          <h5>Италия без купюр. Исследование итальянского сердца</h5>
+          <h5>Италия без купюр.</h5>
           <div className="d-flex justify-between align-center">
             <div className="d-flex flex-column">
               <span>Цена:</span>
