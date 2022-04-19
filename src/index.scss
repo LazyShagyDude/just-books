@@ -88,4 +88,48 @@ h2{
   margin: 0;
   font-size: 24px;
 }
-}  
+}
+
+.cartTotalBlock{
+  div{
+    flex: 1;
+  }
+}
+
+.cartItem{
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+
+  p {
+    font-size: 14px;
+  }
+  b{
+    font-size: 13 px;
+  }
+  .removeBtn{
+    opacity: 0.5;
+    cursor: pointer;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+.order{
+  margin-top: 20px;
+  width: 100%;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  color: #EEE7FF;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover{
+    background: lighten(#9dd558, 10%);
+  }
+}
+.items{
+  overflow: auto;
+  margin-bottom: 40px;
+}
