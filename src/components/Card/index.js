@@ -1,6 +1,8 @@
+import cardStyle from './Card.module.scss'
+
 function Card(props){
     return(
-        <div className="card">
+        <div className={cardStyle.card}>
             <img width={80} height={117} src={props.imgURL}></img>
             <h5>{props.name}</h5>
                 <div className="d-flex justify-between align-center">
@@ -8,8 +10,8 @@ function Card(props){
                         <span>Цена:</span>
                         <b>{props.price} руб.</b>
                     </div>
-                        <button className="button">
-                        <img width={11} height={11} src="/img/plus.svg"></img>
+                    <button className="button">
+                    <img width={11} height={11} src="/img/plus.svg"></img>
                     </button>
                 </div>
         </div>);
