@@ -56,13 +56,13 @@ header{
 }
 
 .button{
-background: #FFFFFF;
-border: 1px solid #F2F2F2;
-box-sizing: border-box;
-border-radius: 8px;
-height: 32px;
-width: 32px;
-cursor: pointer;
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
 }
 
 .overlay{
@@ -76,15 +76,15 @@ cursor: pointer;
   }
 
 .drawer{
-display: flex;
-flex-direction: column;
-position: absolute;
-width: 385px;
-height: 100%;
-right: 0;
-background: #FFFFFF;
-box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 385px;
+  height: 100%;
+  right: 0;
+  background: #FFFFFF;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 
 .items{
   flex: 1;

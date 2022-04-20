@@ -2,6 +2,13 @@ import Card from "./components/Card";
 import Drawer from "./components/Drawer";
 import Header from "./components/Header";
 
+const arr =[
+  {name:'Мастер… без Маргариты',price:'636',imgURL:'/img/books/book1.png',},
+  {name:'Италия без купюр. ',price:'503',imgURL:'/img/books/book2.png',},
+  {name:'Сокровенное таинство',price:'528',imgURL:'/img/books/book3.png',},
+  {name:'Четвертый Кеннеди',price:'716',imgURL:'/img/books/book4.png',},
+]
+
 function App() {
   return (
     <div className="wrapper clear">
@@ -9,49 +16,12 @@ function App() {
       <Header/>
       <div className="content p-40">
         <h1 className="mb-40">Просто Книги</h1>
-        <div className="d-flex">
-        <Card/>
-        <div className="card">
-          <img width={80} height={117} src="/img/books/book2.png"></img>
-          <h5>Италия без купюр.</h5>
-          <div className="d-flex justify-between align-center">
-            <div className="d-flex flex-column">
-              <span>Цена:</span>
-              <b>503 руб.</b>
-            </div>
-            <button className="button">
-              <img width={11} height={11} src="/img/plus.svg"></img>
-            </button>
+          <div className="d-flex">
+            {arr.map((obj)=>(
+              <Card name={obj.name} price={obj.price} imgURL={obj.imgURL}/>
+            ))}
           </div>
-        </div>
-        <div className="card">
-          <img width={80} height={117} src="/img/books/book3.png"></img>
-          <h5>Сокровенное таинство</h5>
-          <div className="d-flex justify-between align-center">
-            <div className="d-flex flex-column">
-              <span>Цена:</span>
-              <b>528 руб.</b>
-            </div>
-            <button className="button">
-              <img width={11} height={11} src="/img/plus.svg"></img>
-            </button>
-          </div>
-        </div>
-        <div className="card">
-          <img width={80} height={117} src="/img/books/book4.png"></img>
-          <h5>Четвертый Кеннеди</h5>
-          <div className="d-flex justify-between align-center">
-            <div className="d-flex flex-column">
-              <span>Цена:</span>
-              <b>716 руб.</b>
-            </div>
-            <button className="button">
-              <img width={11} height={11} src="/img/plus.svg"></img>
-            </button>
-          </div>
-        </div>
       </div>
-        </div>
     </div>
     );
 }
