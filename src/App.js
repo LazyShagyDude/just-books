@@ -1,3 +1,4 @@
+import React from "react";
 import Card from "./components/Card";
 import Drawer from "./components/Drawer";
 import Header from "./components/Header";
@@ -10,15 +11,23 @@ const arr =[
 ]
 
 function App() {
+  const [cartOp,setCartOp] = React.useState(false);
+  const [cartItems, setCartItems] = React.useState([]);
+  
+  const onAddToCart=(onj)=>{
+    setCartItems(prev => [... prev,onj])
+  }
+
+
   return (
     <div className="wrapper clear">
-      <Drawer/>
-      <Header/>
+      {cartOp && <Drawer items={cartItems} onClose = {() => setCartOp(false)}/>}
+      <Header onClickCart = {() => setCartOp(true)}/>
       <div className="content p-40">
         <h1 className="mb-40">Просто Книги</h1>
           <div className="d-flex">
             {arr.map((obj)=>(
-              <Card name={obj.name} price={obj.price} imgURL={obj.imgURL}/>
+              <Card name={obj.name} price={obj.price} imgURL={obj.imgURL} onPlus={(onj)=> onAddToCart(onj)}/>
             ))}
           </div>
       </div>

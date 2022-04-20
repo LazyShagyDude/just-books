@@ -1,19 +1,21 @@
-function Drawer(){
+function Drawer({onClose, items=[]}){
     return(
-    <div style={{display: 'none'}} className="overlay">
+    <div className="overlay">
     <div className="drawer">
       <h2 className="mb-15 d-flex justify-between">Корзина 
-      <img className="removeBtn cu-p" src="/img/delete.svg"></img>
+      <img onClick={onClose} className="removeBtn cu-p" src="/img/delete.svg"></img>
       </h2>
       <div className="items">
-      <div className="cartItem d-flex align-center mb-20">
-        <img className="mr-20" src="/img/books/book1.png"></img>
-        <div className="mr-20">
-          <p className="mb-5">Мастер… без Маргариты</p>
-          <b>636 руб</b>
-        </div>
-        <img className="removeBtn" src="/img/delete.svg"></img>
-      </div>
+        {items.map((obj)=>(
+                <div className="cartItem d-flex align-center mb-20">
+                <img className="mr-20" src={obj.imgURL}></img>
+                <div className="mr-20">
+                  <p className="mb-5">{obj.name}</p>
+                  <b>{obj.price} руб.</b>
+                </div>
+                <img className="removeBtn" src="/img/delete.svg"></img>
+              </div>
+        ))}
       </div>
       <ul className="cartTotalBlock">
         <li className="d-flex">
